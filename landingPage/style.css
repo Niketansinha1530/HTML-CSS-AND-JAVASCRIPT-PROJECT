@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.main .left{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    /* background-color: aqua; */
+}
+.main .right{
+    width: 60%;
+    height: 100%;
+    background-color: chartreuse;
+}
+
+.right .righttop{
+    width: 100%;
+    height: 50%;
+    background-color: darkorange;
+    display: flex;
+}
+.righttop .righttopright{
+    height: 100%;
+    width: 55%;
+    /* background-color: darksalmon; */
+    background-image: url(pexels-cottonbro-studio-3298060.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.righttop .righttopleft{
+    height: 100%;
+    width: 45%;
+    /* background-color: hotpink; */
+    background-image: url(pexels-pixabay-461415.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
+.right .rightbottom{
+    width: 100%;
+    height: 50%;
+    /* background-color: darkred; */
+    background-image: url(pexels-ylanite-koppens-796620.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.left .navl{
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navl i{
+    font-size: 25px;
+    opacity: 0.6;
+}
+.navl .navlr{
+    display: flex;
+    align-items: center;
+}
+.navlr a{
+    margin-right: 40px;
+    text-decoration: none;
+    color:#000;
+}
+.navlr a:nth-child(1)
+{
+    border-bottom: 2px solid black;
+}
+.navlr a:nth-child(2)
+{
+   opacity: 0.4;
+}
+.left .textcenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.textcenter h1{
+    font-size: 65px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.textcenter p{
+    margin-bottom: 15px;
+    opacity: 0.7;
+    font-weight: 700;
+}
+.textcenter a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid black;
+    font-weight: 700;
+}
+
+@media (max-width: 500px){
+    .main{
+        flex-direction: column;
+    }
+    .main .left{
+        width: 100%;
+    }
+    .textcenter h1{
+        margin-bottom: -11px;
+    }
+    .main .right{
+        width: 100%;
+    }
+}

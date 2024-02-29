@@ -1,0 +1,253 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::selection{
+    color: #fff;
+    background-color: black;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: #f7f7f7;
+}
+#nav {
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+#nav-part2 #links a {
+    text-transform: uppercase;
+
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 20px;
+}
+#nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+#links {
+    padding: 10px;
+}
+
+#icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+}
+#nav-part2 #icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+.cursor{
+    height: 180px;
+    width: 180px;
+    background-color: rgba(224, 139, 189, 0.814);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+}
+/* when we give % to element its take according to parent */
+/* vh means view-port height */
+#page1{
+    
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 28vh;
+}
+#page1 h1{
+    font-size: 15.2vw;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 13vw;
+    letter-spacing: -9px;
+    text-align: center;
+}
+
+#video-container{
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+    margin-top: 2vw;
+    position: relative;
+}
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* cursor on video */
+#video-container #play{
+    padding: 3vw 2.2vw;
+    background-color: black;
+    color: #fff;
+    font-family: futura;
+    text-transform: uppercase;
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0; 
+    scale: 0;
+
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding:3vw 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    /* box on image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+/* same code for different dets */
+#page2 .elem .dets1{
+    height: 50px;
+    width: 70%;
+    border-radius: 50px;
+    background-color:#E5F0D6;
+    position: absolute;
+}
+#page2 .elem .dets2{
+    height: 50px;
+    width: 70%;
+    border-radius: 50px;
+    background-color:#f5dfcf;
+    position: absolute;
+}
+#page2 .elem .dets3{
+    height: 50px;
+    width: 70%;
+    border-radius: 50px;
+    background-color:#ffffff;
+    position: absolute;
+}
+#page2 .elem .dets1:hover{
+height: 210px;
+}
+#page2 .elem .dets2:hover{
+    height: 210px;
+}
+#page2 .elem .dets3:hover{
+        height: 210px;
+}
+/* page3 */
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly ;
+    flex-wrap: wrap;
+}
+.child{
+    height: 55vh;
+    width: 40vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child img{
+    height: 100%;
+}
+@media (max-width:600px) {
+    #nav-part2 #links a {
+       display: none;
+    }
+    #page1{
+        min-height: 75vh;
+        padding: 0 3vw;
+        padding-top: 35vh;
+    }
+    #page1 h1{
+        font-size: 15.2vw;
+        letter-spacing: -2px;
+    }
+
+    #video-container{
+        height: 25vh;
+        margin-top: 4vw;
+    }
+
+    #video-container #play{
+        padding: 7.5vw 5.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 3vw;
+        opacity: 1; 
+        scale: 1;
+        letter-spacing: 1px;
+        transform: translate(-50%,-50%);
+        /* position on video */
+    }
+
+    #page2{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        padding:5vw 3vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        /* background-color: red; */
+    }
+    #page2 .elem{
+        height: 100vh;
+        width: 100%;
+        /* background-color: red; */
+        overflow: hidden;
+        margin-bottom: 3vw;
+    
+    }
+    #page2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 1.1;
+    }
+    #page3{
+       
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

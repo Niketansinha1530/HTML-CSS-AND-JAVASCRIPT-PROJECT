@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <i class="ri-send-plane-fill" id="topicon"></i>
+        <form>
+            <div class="input-group">
+                <label for="name">Full Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>
+            <div class="input-group">
+                <label for="mobile">Phone No:</label>
+                <input type="tel" name="mobile" id="mobile" placeholder="123 456 7890" onkeyup="validatePh()">
+                <span id="ph-error"></span>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Id:</label>
+                <input type="email" name="email" id="email" placeholder="Enter email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+            <div class="input-group">
+                <label for="msg">Your Message:</label>
+                <textarea name="" id="msg" cols="30" rows="3" placeholder="Enter your message"
+                    onkeyup="validatemsg()"></textarea>
+                <span id="msg-error"></span>
+            </div>
+
+            <button id="btn" onclick=" return validateForm()">submit</button>
+            <span id="error"></span>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
