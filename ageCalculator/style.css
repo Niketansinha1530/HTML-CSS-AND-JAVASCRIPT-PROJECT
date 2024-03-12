@@ -40,10 +40,12 @@ body{
     border: 0;
     outline: 0;
     font-size: 22px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding:14px 20px ;
     width: 20rem ;
     position: relative;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 .display input::-webkit-calendar-picker-indicator{
     top: 0;
@@ -64,8 +66,10 @@ body{
     color:#333;
     font-weight: 500;
     background-color: #FFF367;
-    padding: 15px 25px;
-    border-radius: 8px;
+    padding: 19px 25px;
+    /* border-radius: 8px; */
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 #result{

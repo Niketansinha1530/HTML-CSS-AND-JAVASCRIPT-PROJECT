@@ -126,6 +126,7 @@ function showQuestion(){
 }
 function resetstate(){
     nextBtn.style.display = "none";
+    // removing old buttons.
     while(answerBtns.firstChild){
         answerBtns.removeChild(answerBtns.firstChild);
     }
