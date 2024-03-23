@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+.inputArea{
+    width: 580px;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.inputArea input{
+    width: 480px;
+    border: none;
+    outline: none;
+    padding: 15px 10px;
+    font-size: 18px;
+    color: black;
+}
+.inputArea button{
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 10px;
+    font-size: 25px;
+    margin-left: 30px;
+}
+.images-container{
+    margin-block: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.images-container img{
+    width: 300px;
+    height: 280px;
+    object-fit: cover;
+    box-shadow: 5px 5px 8px rgba(0, 255, 0, 0.6);
+    border-radius: 10px;
+}
+.images-container .imagDiv{
+    position: relative;
+}
+.images-container .overlay{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 0;
+    transition:height 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagDiv:hover .overlay{
+    height: 100%;
+}
+
+.imagDiv .overlay h3{
+    display: none;
+}
+
+.imagDiv:hover .overlay h3{
+
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+main section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loadMoreBtn{
+    display: none;
+    border: none;
+    background-color: crimson;
+    outline: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 5px 8px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+/* Responsive code */
+@media screen and (max-width:600px) {
+    header{
+        width:80%
+    }
+    .inputArea{
+        width: 400px;
+        display: flex;
+        align-items: center;
+
+    }
+    .inputArea input{
+        width: 350px;
+    }
+
+}
